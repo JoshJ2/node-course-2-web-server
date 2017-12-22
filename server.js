@@ -51,6 +51,13 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/portfolio', (req, res) => {
+  res.render('portfolio.hbs', {
+    pageTitle: 'About Page',
+    currentYear: new Date().getFullYear()
+  });
+});
+
 app.get('/bad', (req, res) => {
   res.send({
     errorMessage: 'You have entered the void.'
